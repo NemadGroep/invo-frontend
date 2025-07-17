@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import MessageGrid from './components/MetadataGrid'
+import DiscreteSlider from './components/DiscreteSlider'
 import { useMetadata } from './hooks/useMetadata'
 import { useEffect } from 'react'
 
@@ -14,8 +15,9 @@ function App() {
   if (error)   return <p style={{ color: 'red' }}>Error: {error.message}</p>;
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl mb-4">Invoice Metadata</h1>
+    <div>
+      <DiscreteSlider/>
+      <h1>Wachtrij</h1>
       <MessageGrid rows={rows} />
     </div>
   );
